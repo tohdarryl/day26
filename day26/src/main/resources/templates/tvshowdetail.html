@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Show Details: <span data-th-text="${id}"></span></h1>
+    <!-- Must iterate as 'details' is a List<TvShow> not TvShow -->
+    <div>
+    <span data-th-each="det: ${details}">
+        <br>
+        <strong>Name: </strong><span data-th-text="${det.name}"></span>
+        <br>
+        <strong>Rating: </strong><span data-th-text="${det.rating}"></span>
+        <br>
+        <strong>More Info: </strong>
+        <a data-th-href="${det.url}">
+            Link to Website
+        </a>
+        <br>
+    </span>
+    </div>
+</body>
+</html>
