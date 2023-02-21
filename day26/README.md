@@ -98,7 +98,7 @@ db.tv.find({
         }
 }).count()
 ```
-skip limit / sort
+skip / limit / sort
 ```
 db.tv.find().skip(<int>).limit(<int>).sort(<1> or <-1>)
 sort: 1 = ascending, -1 = descending
